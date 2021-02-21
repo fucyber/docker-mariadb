@@ -1,7 +1,5 @@
-/vendor
-/.idea
+ /.idea
 Homestead.json
-Homestead.yaml
-/volume 
+Homestead.yaml 
 
 
