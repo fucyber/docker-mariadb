@@ -1,0 +1,24 @@
+version: '3.1'
+
+networks:
+  default:
+      name: thcp-network
+
+services:
+  mariadb:
+    image: mariadb:10.3
+    container_name: mariadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./volume:/var/lib/mysql
+      - ./config/mariadb.cnf:/etc/mysql/mariadb.cnf
+    networks:
+      - default
+    environment:
+      - TZ="Asia/Bangkok"
+      - MYSQL_ROOT_PASSWORD=Root@
+      - MYSQL_ROOT_HOST=%
+
+
+
